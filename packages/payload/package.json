@@ -1,6 +1,6 @@
 {
   "name": "payload",
-  "version": "4.0.0-beta.3",
+  "version": "4.0.0-beta.11",
   "description": "Node, React, Headless CMS and Application Framework built on Next.js",
   "keywords": [
     "admin panel",
@@ -57,6 +57,11 @@
     }
   },
   "exports": {
+    "./build-config": {
+      "types": "./src/exports/build-config.js",
+      "import": "./src/exports/build-config.js",
+      "default": "./src/exports/build-config.js"
+    },
     ".": {
       "types": "./src/index.ts",
       "browser": "./src/exports/shared.ts",
@@ -119,6 +124,11 @@
       }
     },
     "exports": {
+      "./build-config": {
+        "types": "./dist/exports/build-config.d.ts",
+        "import": "./dist/exports/build-config.js",
+        "default": "./dist/exports/build-config.js"
+      },
       ".": {
         "types": "./dist/index.d.ts",
         "browser": "./dist/exports/shared.js",
@@ -185,7 +195,7 @@
     "pretest": "pnpm build"
   },
   "dependencies": {
-    "@next/env": "16.4.2",
+    "@next/env": "16.4.6",
     "@payloadcms/translations": "workspace:*",
     "@standard-schema/spec": "1.1.0",
     "@types/busboy": "1.5.4",
@@ -196,7 +206,6 @@
     "console-table-printer": "2.15.0",
     "croner": "10.0.1",
     "dataloader": "2.2.3",
-    "deepmerge": "4.3.1",
     "dotenv": "16.4.5",
     "dotenv-expand": "11.0.6",
     "file-type": "22.0.1",
@@ -215,7 +224,7 @@
     "sax": "1.6.1",
     "ts-essentials": "10.0.3",
     "tsx": "4.23.15",
-    "undici": "7.29.1",
+    "undici": "7.30.1",
     "uuid": "14.0.0",
     "ws": "^8.16.0",
     "zod": "catalog:"
@@ -242,6 +251,6 @@
     "graphql": "^16.8.1"
   },
   "engines": {
-    "node": ">=24.15.0"
+    "node": "^24.22.3 || >=26.13.1"
   }
 }

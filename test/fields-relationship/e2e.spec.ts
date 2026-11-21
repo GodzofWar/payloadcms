@@ -651,6 +651,16 @@ describe('Relationship Field', () => {
     await expect(documentDrawer).toBeVisible()
   })
 
+  test('should translate localized labels for create document drawer togglers', async () => {
+    await loadCreatePage()
+
+    const createDrawerTrigger = page.locator(
+      '#field-relationship .relationship-add-new__add-button',
+    )
+
+    await expect(createDrawerTrigger).toHaveAttribute('aria-label', 'Add new Relation One')
+  })
+
   test('should open document from drawer by clicking on ID Label', async () => {
     const relatedDoc = await payload.create({
       collection: relationOneSlug,
@@ -726,7 +736,7 @@ describe('Relationship Field', () => {
     await openCreateDocDrawer({ fieldSelector: '#field-relationshipHasMany', page })
     const documentDrawer = page.locator('[id^=doc-drawer_relation-one_1_]')
     await expect(documentDrawer).toBeVisible()
-    const drawerField = documentDrawer.locator('#field-name')
+    const drawerField = documentDrawer.locator('input[name="name"]')
     await drawerField.fill('Newly created document')
     const saveButton = documentDrawer.locator('#action-save')
     await saveButton.click()
@@ -756,7 +766,7 @@ describe('Relationship Field', () => {
       selector: '#field-relationship button.relationship--single-value__drawer-toggler',
     })
 
-    const field = page.locator('#field-name')
+    const field = page.locator('.doc-drawer').getByRole('textbox', { name: 'Name', exact: true })
     await field.fill('Updated')
 
     await saveButton.nth(1).click()

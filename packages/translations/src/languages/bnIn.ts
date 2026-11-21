@@ -294,6 +294,7 @@ export const bnInTranslations: DefaultTranslationsObject = {
     and: 'এবং',
     anotherUser: 'অন্য ব্যবহারকারী',
     anotherUserTakenOver: 'অন্য একজন ব্যবহারকারী এই ডকুমেন্ট সম্পাদনার দায়িত্ব নিয়েছেন।',
+    apiResponse: 'API প্রতিক্রিয়া',
     applyChanges: 'পরিবর্তনগুলি প্রয়োগ করুন',
     ascending: 'আরোহী',
     auto: 'স্বয়ংক্রিয়',
@@ -366,6 +367,13 @@ export const bnInTranslations: DefaultTranslationsObject = {
     documentOutOfDate:
       'এই নথিটি সম্প্রতি অন্য ব্যবহারকারীর দ্বারা আপডেট করা হয়েছে। আপনার দেখানো ভার্সন আপ টু ডেট নয়।',
     documents: 'ডকুমেন্টগুলি',
+    dragCancelled: '{{label}} টেনে সরানো বাতিল হয়েছে।',
+    dragDropped: '{{label}} ছেড়ে দেওয়া হয়েছে। {{count}}টির মধ্যে অবস্থান {{position}}।',
+    dragInstructions:
+      'একটি সারি তুলতে Space বা Enter চাপুন। সরাতে তীর চিহ্নের কী ব্যবহার করুন। VoiceOver ব্যবহার করলে Quick Nav বন্ধ করে Command + তীর চিহ্নের কী ব্যবহার করুন। ছেড়ে দিতে Space বা Enter, অথবা বাতিল করতে Escape চাপুন।',
+    dragMoved: '{{label}}: {{direction}}. {{count}}টির মধ্যে অবস্থান {{position}}।',
+    dragPickedUp: '{{label}} তুলে নেওয়া হয়েছে। {{count}}টির মধ্যে অবস্থান {{position}}।',
+    dragToMove: 'সরাতে টেনে আনুন',
     dragToReorder: 'টেনে অর্ডার পরিবর্তন করুন',
     duplicate: 'ডুপ্লিকেট করুন',
     duplicateWithoutSaving: 'পরিবর্তনগুলি সংরক্ষণ না করে ডুপ্লিকেট করুন',
@@ -480,6 +488,7 @@ export const bnInTranslations: DefaultTranslationsObject = {
     reindexingAll: 'সমস্ত {{collections}} পুনরায় সূচিবদ্ধ করা হচ্ছে।',
     reloadDocument: 'নথি পুনরায় লোড করুন',
     remove: 'অপসারণ করুন',
+    removeFilter: 'ফিল্টার সরান',
     rename: 'নাম পরিবর্তন করুন',
     replaceRow: 'সারি প্রতিস্থাপন করুন',
     requiredFields: '* চিহ্নিত ঘরগুলি পূরণ করা আবশ্যক।',
@@ -572,6 +581,7 @@ export const bnInTranslations: DefaultTranslationsObject = {
     yes: 'হ্যাঁ',
   },
   hierarchy: {
+    folderLocation: 'ফোল্ডারের অবস্থান',
     goTo: '"{{name}}" তে যান',
     itemsMovedTo: '{{title}} টি {{destination}} এ সরিয়ে নেওয়া হলো।',
     itemsMovedToRoot: '{{title}} মূলে সরিয়ে নেওয়া হয়েছে',
@@ -632,6 +642,7 @@ export const bnInTranslations: DefaultTranslationsObject = {
     addFile: 'ফাইল যোগ করুন',
     addFiles: 'ফাইলগুলি যোগ করুন',
     bulkUpload: 'বাল্ক আপলোড',
+    cancelUpload: 'আপলোড বাতিল করুন',
     copyLinkToFile: 'ফাইলের লিঙ্ক অনুলিপি করুন',
     copyURL: 'URL অনুলিপি করুন',
     crop: 'ক্রপ করুন',
@@ -652,6 +663,7 @@ export const bnInTranslations: DefaultTranslationsObject = {
     fileSize: 'ফাইলের আকার',
     filesToUpload: 'আপলোড করার ফাইলগুলি',
     fileToUpload: 'আপলোড করার ফাইল',
+    finishSaving: 'সংরক্ষণ সম্পূর্ণ করুন',
     focalPoint: 'ফোকাল পয়েন্ট',
     focalPointDescription: 'প্রিভিউতে সরাসরি ফোকাল পয়েন্ট টানুন বা নিচের মানগুলি সামঞ্জস্য করুন।',
     fromURL: 'URL থেকে ফাইল আপলোড করুন',
@@ -665,12 +677,24 @@ export const bnInTranslations: DefaultTranslationsObject = {
     previewSizes: 'প্রিভিউ আকারগুলি',
     renameFile: 'ফাইলের নাম পরিবর্তন করুন',
     replaceFile: 'ফাইল প্রতিস্থাপন করুন',
+    resumingFile: '{{filename}} আবার শুরু হচ্ছে',
+    savingInBackground: 'আপলোডটি ব্যাকগ্রাউন্ডে শেষ হবে এবং তখন ডকুমেন্টটি সংরক্ষিত হবে।',
     selectCollectionToBrowse: 'ব্রাউজ করার জন্য একটি সংগ্রহ নির্বাচন করুন',
     selectFile: 'একটি ফাইল নির্বাচন করুন',
     setCropArea: 'ক্রপ অঞ্চল সেট করুন',
     setFocalPoint: 'ফোকাল পয়েন্ট সেট করুন',
     sizes: 'আকারগুলি',
     sizesFor: '{{label}} এর জন্য আকারগুলি',
+    uploadFileMismatch: 'নির্বাচিত ফাইলটি বাধাপ্রাপ্ত আপলোডের সঙ্গে মেলে না।',
+    uploadingFile: '{{filename}} আপলোড হচ্ছে',
+    uploadingFileProgress: '{{filename}} আপলোড হচ্ছে: {{percent}}%',
+    uploadInProgressLeaveWarning: 'একটি আপলোড এখনও চলছে। এখন চলে গেলে এটি বাধাপ্রাপ্ত হবে।',
+    uploadInterrupted: '{{filename}}-এর আপলোড বাধাপ্রাপ্ত হয়েছে।',
+    uploadInterruptedWillSave:
+      '{{filename}}-এর আপলোড বাধাপ্রাপ্ত হয়েছে। এটি শেষ হলে ডকুমেন্টটি সংরক্ষিত হবে।',
+    uploadReadyToFinishSaving: '{{filename}} আপলোড সম্পূর্ণ হয়েছে। সংরক্ষণ শেষ করতে ফর্মটি খুলুন।',
+    uploadSavedInBackground: 'আপলোড সম্পূর্ণ হয়েছে এবং ডকুমেন্টটি সংরক্ষিত হয়েছে।',
+    uploadStorageRejectedSegments: 'স্টোরেজ কোনো আপলোড অংশ গ্রহণ করেনি। বাকেটের CORS নীতি যাচাই করুন।',
     width: 'প্রস্থ',
   },
   validation: {
@@ -704,6 +728,10 @@ export const bnInTranslations: DefaultTranslationsObject = {
     aboutToPublishSelection: 'আপনি নির্বাচনে সমস্ত {{label}} প্রকাশ করতে চলেছেন। আপনি কি নিশ্চিত?',
     aboutToRestore:
       'আপনি এই {{label}} ডকুমেন্টটি {{versionDate}} তারিখে যে অবস্থায় ছিল সেই অবস্থায় পুনরুদ্ধার করতে চলেছেন।',
+    aboutToRestoreAsDraft:
+      '{{versionDate}} তারিখের বিষয়বস্তু খসড়া হিসেবে পুনরুদ্ধার করুন। সম্পাদক থেকে প্রকাশ না করা পর্যন্ত প্রকাশিত বিষয়বস্তু অপরিবর্তিত থাকবে।',
+    aboutToRestoreAsDraftAllLocales:
+      '{{versionDate}} তারিখের বিষয়বস্তু সব ভাষায় খসড়া হিসেবে পুনরুদ্ধার করুন। সম্পাদক থেকে প্রকাশ না করা পর্যন্ত প্রকাশিত বিষয়বস্তু অপরিবর্তিত থাকবে।',
     aboutToRestoreGlobal:
       'আপনি গ্লোবাল {{label}} কে {{versionDate}} তারিখে যে অবস্থায় ছিল সেই অবস্থায় পুনরুদ্ধার করতে চলেছেন।',
     aboutToRevertToPublished:
